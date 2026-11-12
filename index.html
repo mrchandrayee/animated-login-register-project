@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0638">
+  <title>Login Page — Animated Sign In / Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1 class="page-title">Login Page</h1>
+
+    <section class="auth-wrapper" id="authWrapper" aria-label="Authentication">
+      <div class="form-container sign-up-container">
+        <form id="signupForm" novalidate>
+          <h2>Create Account</h2>
+          <div class="social-container" aria-label="Social sign up">
+            <button class="social" type="button" data-provider="Google" aria-label="Sign up with Google"><span class="google">G</span></button>
+            <button class="social" type="button" data-provider="Facebook" aria-label="Sign up with Facebook"><span class="facebook">f</span></button>
+            <button class="social" type="button" data-provider="GitHub" aria-label="Sign up with GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></button>
+            <button class="social" type="button" data-provider="LinkedIn" aria-label="Sign up with LinkedIn"><span class="linkedin">in</span></button>
+          </div>
+          <span class="helper">or use your email for registration</span>
+          <input type="text" id="signupName" placeholder="Name" autocomplete="name" aria-label="Name">
+          <input type="email" id="signupEmail" placeholder="Email" autocomplete="email" aria-label="Email">
+          <input type="password" id="signupPassword" placeholder="Password" autocomplete="new-password" aria-label="Password">
+          <button class="primary" type="submit">Sign Up</button>
+          <p class="form-status" id="signupStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="form-container sign-in-container">
+        <form id="signinForm" novalidate>
+          <h2>Sign in</h2>
+          <div class="social-container" aria-label="Social sign in">
+            <button class="social" type="button" data-provider="Google" aria-label="Sign in with Google"><span class="google">G</span></button>
+            <button class="social" type="button" data-provider="Facebook" aria-label="Sign in with Facebook"><span class="facebook">f</span></button>
+            <button class="social" type="button" data-provider="GitHub" aria-label="Sign in with GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></button>
+            <button class="social" type="button" data-provider="LinkedIn" aria-label="Sign in with LinkedIn"><span class="linkedin">in</span></button>
+          </div>
+          <span class="helper">or use your email password</span>
+          <input type="email" id="signinEmail" placeholder="Email" autocomplete="email" aria-label="Email">
+          <input type="password" id="signinPassword" placeholder="Password" autocomplete="current-password" aria-label="Password">
+          <a class="forgot" href="#" id="forgotLink">Forget Your Password?</a>
+          <button class="primary" type="submit">Sign In</button>
+          <p class="form-status" id="signinStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h2>Welcome Back!</h2>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="showSignIn" type="button">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2>Hello, Friend!</h2>
+            <p>Register with your personal details<br>to use all of site features.</p>
+            <button class="ghost" id="showSignUp" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="credit">@DEXE</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
